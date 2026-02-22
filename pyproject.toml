@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "approval-gate"
+version = "0.1.0"
+description = "Human approval gate CLI for high-risk agent actions"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+approval-gate = "approval_gate.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
